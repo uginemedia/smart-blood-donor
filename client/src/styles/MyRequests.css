@@ -1,0 +1,1375 @@
+/* =========================================
+   LIFELINK — MY BLOOD REQUESTS
+========================================= */
+
+.my-requests-page {
+  min-height: 100vh;
+  padding: 32px 22px 65px;
+  background:
+    radial-gradient(
+      ellipse at top right,
+      rgba(199, 25, 31, 0.055),
+      transparent 32%
+    ),
+    #f5f7fa;
+  color: #22252b;
+}
+
+.my-requests-wrapper {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.requests-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 25px;
+  color: #c62828;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition:
+    gap 0.2s ease,
+    color 0.2s ease;
+}
+
+.requests-back-link span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.requests-back-link:hover {
+  gap: 13px;
+  color: #941b20;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.requests-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  overflow: hidden;
+  margin-bottom: 27px;
+  padding: 34px 35px;
+  background: #fff;
+  border: 1px solid #f0e5e5;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(35, 35, 35, 0.035);
+}
+
+.requests-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 670px;
+}
+
+.requests-eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  color: #c62828;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.requests-hero h1 {
+  margin: 0 0 10px;
+  color: #202124;
+  font-size: clamp(27px, 3.5vw, 36px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.requests-hero-copy > p {
+  max-width: 620px;
+  margin: 0;
+  color: #777e88;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.new-request-button {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 19px;
+  background: #c62828;
+  border: 1px solid #c62828;
+  border-radius: 10px;
+  box-shadow: 0 7px 18px rgba(198, 40, 40, 0.17);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 750;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.new-request-button > span {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.new-request-button:hover {
+  transform: translateY(-2px);
+  background: #a91e24;
+  box-shadow: 0 10px 24px rgba(198, 40, 40, 0.23);
+  color: #fff;
+}
+
+.requests-hero-decoration {
+  position: absolute;
+  right: 145px;
+  bottom: -66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 175px;
+  border: 24px solid rgba(198, 40, 40, 0.035);
+  border-radius: 50%;
+  color: rgba(198, 40, 40, 0.07);
+  font-size: 35px;
+  pointer-events: none;
+}
+
+.requests-hero-decoration span:first-child {
+  transform: translate(9px, -4px);
+}
+
+.requests-hero-decoration span:last-child {
+  transform: translate(-7px, 15px);
+}
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.request-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 38px;
+}
+
+.request-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #eceef2;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(30, 35, 45, 0.035);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.request-summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 27px rgba(30, 35, 45, 0.075);
+}
+
+.summary-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  border-radius: 13px;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.summary-icon.total {
+  background: #f0f2f6;
+  color: #515c6c;
+}
+
+.summary-icon.active {
+  background: #e9f7ef;
+  color: #23834b;
+}
+
+.summary-icon.donors {
+  background: #fff0f1;
+  color: #c62828;
+}
+
+.summary-card-copy {
+  min-width: 0;
+}
+
+.summary-card-copy > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #7b818b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.summary-card-copy strong {
+  display: block;
+  color: #242830;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.summary-card-copy small {
+  display: block;
+  margin-top: 5px;
+  color: #a0a4ad;
+  font-size: 10px;
+}
+
+/* =========================================
+   CONTENT HEADER
+========================================= */
+
+.requests-content {
+  margin-top: 0;
+}
+
+.requests-content-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.requests-content-heading .requests-eyebrow {
+  margin-bottom: 6px;
+}
+
+.requests-content-heading h2 {
+  margin: 0 0 7px;
+  color: #23262d;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.requests-content-heading p {
+  margin: 0;
+  color: #858b95;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.refresh-requests-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid #e3e5e9;
+  border-radius: 9px;
+  color: #535a65;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.refresh-requests-button > span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.refresh-requests-button:hover:not(:disabled) {
+  background: #fff5f5;
+  border-color: #e7b7b9;
+  color: #c62828;
+}
+
+.refresh-requests-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.refresh-spinning {
+  animation: requests-loading-spin 0.8s linear infinite;
+}
+
+/* =========================================
+   SEARCH AND FILTERS
+========================================= */
+
+.requests-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  margin-bottom: 17px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #eaecf0;
+  border-radius: 13px;
+}
+
+.request-search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 0 12px;
+  background: #f8f9fb;
+  border: 1px solid #e9ebef;
+  border-radius: 9px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.request-search:focus-within {
+  border-color: #c62828;
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.07);
+}
+
+.request-search > span {
+  color: #9399a4;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.request-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: #292d35;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.request-search input::placeholder {
+  color: #a0a5ae;
+}
+
+.request-search input:focus {
+  outline: none;
+}
+
+.clear-search-button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  color: #7c828c;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.clear-search-button:hover {
+  background: #eceef2;
+}
+
+.request-filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.request-filter > span {
+  color: #777e88;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.request-filter select {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  /* border: 1px solid #e0e3e8; */
+  border: none;
+  border-radius: 9px;
+  color: #353a43;
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.request-filter select:focus {
+  border-color: #c62828;
+}
+
+/* =========================================
+   RESULTS LINE
+========================================= */
+
+.requests-results-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #858b95;
+  font-size: 12px;
+}
+
+.requests-results-line strong {
+  color: #3c414b;
+}
+
+.critical-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #bd292e;
+  font-weight: 700;
+}
+
+.critical-count > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: #ffebec;
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+/* =========================================
+   REQUEST LIST
+========================================= */
+
+.hospital-request-list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+/* =========================================
+   REQUEST CARD
+========================================= */
+
+.hospital-request-card {
+  overflow: hidden;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #eaecf0;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(30, 35, 45, 0.035);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hospital-request-card:hover {
+  transform: translateY(-2px);
+  border-color: #e6d3d4;
+  box-shadow: 0 11px 28px rgba(30, 35, 45, 0.065);
+}
+
+.closed-request-card {
+  background: #fdfcfc;
+  border-color: #ebdede;
+}
+
+.closed-request-card .blood-group-badge {
+  background: #f3eeee;
+  color: #777;
+}
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.hospital-request-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid #f0f1f4;
+}
+
+.blood-request-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.blood-group-badge {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  background: #fff0f1;
+  border: 1px solid #ffe1e3;
+  border-radius: 15px;
+  color: #c62828;
+  font-size: 19px;
+  font-weight: 850;
+}
+
+.blood-group-badge > span {
+  margin-top: 3px;
+  color: #b66c70;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.request-title-copy {
+  min-width: 0;
+}
+
+.request-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #a0a4ad;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.request-title-copy h3 {
+  margin: 0 0 5px;
+  color: #282c34;
+  font-size: 18px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.request-title-copy p {
+  margin: 0;
+  color: #9399a2;
+  font-size: 11px;
+}
+
+.request-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* =========================================
+   URGENCY BADGES
+========================================= */
+
+.request-urgency,
+.request-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.request-urgency {
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.urgency-dot {
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.request-urgency.normal {
+  background: #eaf7ee;
+  color: #287d43;
+}
+
+.request-urgency.urgent {
+  background: #fff2df;
+  color: #b56a0a;
+}
+
+.request-urgency.critical {
+  background: #ffebed;
+  color: #c62828;
+}
+
+/* =========================================
+   STATUS BADGES
+========================================= */
+
+.request-status-badge {
+  background: #f0f2f5;
+  color: #5c626d;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+.request-status-badge .status-dot {
+  width: 7px;
+  height: 7px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.request-status-badge.pending {
+  background: #fff4df;
+  color: #986500;
+}
+
+.request-status-badge.matched {
+  background: #e8f6ec;
+  color: #287b40;
+}
+
+.request-status-badge.closed {
+  background: #fce9e9;
+  color: #b71c1c;
+}
+
+.request-status-badge.completed {
+  background: #eaf1ff;
+  color: #2d5ba7;
+}
+
+/* =========================================
+   REQUEST DETAILS
+========================================= */
+
+.hospital-request-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 21px 0;
+}
+
+.request-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  min-width: 0;
+  padding: 15px 13px;
+  background: #f8f9fb;
+  border: 1px solid #f1f2f5;
+  border-radius: 11px;
+}
+
+.detail-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #eceef2;
+  border-radius: 8px;
+  color: #c62828;
+  font-size: 17px;
+}
+
+.request-info-item > div {
+  min-width: 0;
+}
+
+.request-info-item > div > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #8c929c;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.request-info-item strong {
+  display: block;
+  color: #30343c;
+  font-size: 14px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.donor-match-info strong {
+  color: #c62828;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.donor-match-info small {
+  display: block;
+  margin-top: 4px;
+  color: #9a9fa8;
+  font-size: 10px;
+}
+
+/* =========================================
+   BLOOD COMPONENT AND PROCESSING
+========================================= */
+
+.request-component-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px 0;
+  border-top: 1px solid #f0f1f4;
+  color: #858b95;
+  font-size: 12px;
+}
+
+.request-component-line strong {
+  color: #464b55;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.request-processing-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0 0 16px;
+}
+
+.request-processing-line span {
+  padding: 6px 9px;
+  background: #fff5f5;
+  border: 1px solid #f6e2e3;
+  border-radius: 6px;
+  color: #a12b30;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+/* =========================================
+   CLOSED REQUEST NOTE
+========================================= */
+
+.request-closed-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  background: #fff5f5;
+  border: 1px solid #f3e0e0;
+  border-radius: 9px;
+  color: #965356;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.request-closed-note > span {
+  color: #b3262c;
+  font-weight: 900;
+}
+
+/* =========================================
+   CARD FOOTER AND ACTIONS
+========================================= */
+
+.hospital-request-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 17px;
+  padding-top: 18px;
+  border-top: 1px solid #f0f1f4;
+}
+
+.request-created-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #9399a2;
+  font-size: 11px;
+}
+
+.request-created-date > span {
+  color: #c62828;
+  font-size: 17px;
+}
+
+.request-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.view-responses-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 11px 15px;
+  background: #c62828;
+  border: 1px solid #c62828;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 750;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.view-responses-button > span {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.view-responses-button:hover {
+  transform: translateY(-1px);
+  background: #a91e24;
+  color: #fff;
+}
+
+.view-responses-button:hover > span {
+  transform: translateX(3px);
+}
+
+.close-request-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 39px;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid #e8babc;
+  border-radius: 8px;
+  color: #b3262c;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.close-request-button:hover:not(:disabled) {
+  background: #fff0f1;
+  border-color: #c62828;
+}
+
+.close-request-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.button-spinner {
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(198, 40, 40, 0.2);
+  border-top-color: #c62828;
+  border-radius: 50%;
+  animation: requests-loading-spin 0.7s linear infinite;
+}
+
+/* =========================================
+   EMPTY STATES
+========================================= */
+
+.requests-empty-state {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 55px 28px;
+  background: #fff;
+  border: 1px solid #eceef2;
+  border-radius: 17px;
+  box-shadow: 0 6px 25px rgba(30, 35, 45, 0.035);
+  text-align: center;
+}
+
+.empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 20px;
+  background: #fff0f1;
+  border: 1px solid #ffe2e3;
+  border-radius: 19px;
+  color: #c62828;
+  font-size: 36px;
+}
+
+.empty-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #c62828;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.requests-empty-state h2 {
+  margin: 0 0 11px;
+  color: #252932;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.requests-empty-state p {
+  max-width: 460px;
+  margin: 0 auto 24px;
+  color: #858b95;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.empty-create-button,
+.reset-filters-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 17px;
+  background: #c62828;
+  border: 1px solid #c62828;
+  border-radius: 9px;
+  color: #fff;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.empty-create-button:hover,
+.reset-filters-button:hover {
+  background: #a91e24;
+  color: #fff;
+}
+
+.filtered-empty-state {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.filtered-empty-state .empty-icon {
+  font-size: 28px;
+}
+
+.reset-filters-button {
+  background: #fff;
+  color: #c62828;
+}
+
+.reset-filters-button:hover {
+  background: #fff0f1;
+  color: #a91e24;
+}
+
+/* =========================================
+   BOTTOM NOTE
+========================================= */
+
+.requests-page-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 26px;
+  padding: 17px 19px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #eee8e8;
+  border-radius: 12px;
+}
+
+.requests-page-note > span {
+  color: #c62828;
+  font-size: 18px;
+}
+
+.requests-page-note p {
+  margin: 0;
+  color: #858b95;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.requests-page-note strong {
+  color: #474c55;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.requests-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 19px;
+  border: 3px solid #e9e9ed;
+  border-top-color: #c62828;
+  border-radius: 50%;
+  animation: requests-loading-spin 0.7s linear infinite;
+}
+
+.requests-loading h2 {
+  margin: 0 0 8px;
+  color: #2d3139;
+  font-size: 20px;
+}
+
+.requests-loading p {
+  margin: 0;
+  color: #858b95;
+  font-size: 13px;
+}
+
+@keyframes requests-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .requests-hero {
+    padding: 29px 25px;
+  }
+
+  .requests-hero-decoration {
+    right: 80px;
+  }
+
+  .request-summary {
+    gap: 12px;
+  }
+
+  .request-summary-card {
+    gap: 12px;
+    padding: 17px;
+  }
+
+  .summary-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .summary-card-copy > span {
+    font-size: 11px;
+  }
+
+  .summary-card-copy strong {
+    font-size: 24px;
+  }
+
+  .hospital-request-details {
+    gap: 9px;
+  }
+
+  .request-info-item {
+    gap: 8px;
+    padding: 13px 10px;
+  }
+
+  .detail-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .my-requests-page {
+    padding: 23px 14px 42px;
+  }
+
+  .requests-back-link {
+    margin-bottom: 19px;
+  }
+
+  .requests-hero {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 21px;
+    border-radius: 15px;
+  }
+
+  .requests-hero h1 {
+    font-size: 27px;
+  }
+
+  .requests-hero-copy > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .requests-hero-decoration {
+    right: -30px;
+    bottom: -80px;
+  }
+
+  .new-request-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .request-summary {
+    grid-template-columns: 1fr;
+    gap: 11px;
+    margin-bottom: 31px;
+  }
+
+  .request-summary-card {
+    padding: 17px;
+  }
+
+  .summary-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .requests-content-heading {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .requests-content-heading h2 {
+    font-size: 20px;
+  }
+
+  .requests-content-heading p {
+    font-size: 12px;
+  }
+
+  .refresh-requests-button {
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+
+  .requests-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 11px;
+  }
+
+  .request-search {
+    flex: auto;
+  }
+
+  .request-filter {
+    justify-content: space-between;
+  }
+
+  .request-filter select {
+    flex: 1;
+    max-width: none;
+  }
+
+  .requests-results-line {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .hospital-request-card {
+    padding: 18px;
+    border-radius: 13px;
+  }
+
+  .hospital-request-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .blood-group-badge {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 13px;
+    font-size: 17px;
+  }
+
+  .request-title-copy h3 {
+    font-size: 17px;
+  }
+
+  .request-card-badges {
+    justify-content: flex-start;
+  }
+
+  .hospital-request-details {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 16px 0;
+  }
+
+  .request-info-item {
+    align-items: center;
+    padding: 12px;
+  }
+
+  .request-info-item > div {
+    flex: 1;
+  }
+
+  .request-component-line {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .request-component-line strong {
+    text-align: left;
+  }
+
+  .hospital-request-footer {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .request-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .view-responses-button,
+  .close-request-button {
+    width: 100%;
+    min-height: 43px;
+    box-sizing: border-box;
+  }
+
+  .requests-empty-state {
+    margin-top: 20px;
+    padding: 40px 19px;
+  }
+
+  .requests-empty-state h2 {
+    font-size: 20px;
+  }
+
+  .requests-page-note {
+    padding: 14px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .my-requests-page {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .requests-hero {
+    padding: 22px 16px;
+  }
+
+  .requests-hero h1 {
+    font-size: 24px;
+  }
+
+  .requests-content-heading {
+    flex-direction: column;
+  }
+
+  .refresh-requests-button {
+    align-self: flex-start;
+  }
+
+  .hospital-request-card {
+    padding: 15px;
+  }
+
+  .blood-request-title {
+    gap: 11px;
+  }
+
+  .blood-group-badge {
+    width: 51px;
+    height: 51px;
+    min-width: 51px;
+  }
+
+  .request-urgency,
+  .request-status-badge {
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .my-requests-page *,
+  .my-requests-page *::before,
+  .my-requests-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

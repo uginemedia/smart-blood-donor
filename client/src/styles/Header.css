@@ -1,0 +1,348 @@
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  width: 100%;
+  height: 125px;
+  background: transparent;
+  position: fixed;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1700px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+/* Logo blood drop */
+
+.logo-image {
+  width: 200px;
+  height: 75px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link,
+.nav-dropdown-button {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-dropdown-button:hover {
+  color: var(--primary-color);
+}
+
+.nav-dropdown-button:hover,
+.arrow {
+  color: var(--primary-color);
+}
+
+/* =========================
+   DROPDOWNS
+========================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+/* Dropdown menu */
+
+.dropdown-menu {
+  position: absolute;
+  top: 38px;
+  left: -15px;
+  min-width: 210px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+  color: #c7191f;
+}
+
+/* =========================
+   DONATION BUTTON
+========================= */
+
+.donation-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 38px;
+  background: #c7191f;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.donation-button:hover {
+  background: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-button {
+  display: none;
+
+  width: 45px;
+  height: 45px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.menu-button span {
+  display: block;
+
+  width: 28px;
+  height: 3px;
+
+  background: white;
+
+  border-radius: 3px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1250px) {
+  .header-container {
+    padding: 0 25px;
+  }
+
+  .navbar {
+    gap: 25px;
+  }
+
+  .nav-link,
+  .nav-dropdown-button {
+    font-size: 18px;
+  }
+
+  .logo-text {
+    font-size: 48px;
+  }
+
+  .logo-icon {
+    transform: scale(0.85);
+  }
+
+  .donation-button {
+    padding: 0 25px;
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .site-header {
+    height: 90px;
+  }
+
+  .header-container {
+    padding: 0 20px;
+  }
+
+  .logo-text {
+    font-size: 40px;
+  }
+
+  .logo-icon {
+    width: 48px;
+    height: 58px;
+    transform: scale(0.7);
+    transform-origin: left center;
+    margin-right: -10px;
+  }
+
+  .menu-button {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    left: 0;
+
+    width: 100%;
+
+    background: #454345;
+
+    padding: 25px 25px 30px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar.navbar-open {
+    display: flex;
+  }
+
+  .nav-link,
+  .nav-dropdown-button {
+    font-size: 18px;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static;
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    box-shadow: none;
+  }
+
+  .donation-button {
+    width: 100%;
+    height: 50px;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 500px) {
+  .site-header {
+    height: 75px;
+  }
+
+  .header-container {
+    padding: 0 15px;
+  }
+
+  .logo-text {
+    font-size: 32px;
+  }
+
+  .logo-icon {
+    transform: scale(0.55);
+    margin-right: -18px;
+  }
+
+  .navbar {
+    top: 75px;
+  }
+}
+
+/* =========================
+   LOGGED IN SECTION
+========================= */
+
+.logged-in-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Logout button */
+
+.logout-button {
+  height: 52px;
+
+  padding: 0 35px;
+
+  background: #c7191f;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #a91419;
+  transform: translateY(-1px);
+}

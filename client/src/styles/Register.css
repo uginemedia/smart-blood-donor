@@ -1,0 +1,630 @@
+/* =========================================
+   REGISTER PAGE
+========================================= */
+
+.register-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 25px;
+}
+
+.register-wrapper {
+  width: 100%;
+  max-width: 1250px;
+  min-height: calc(100vh - 50px);
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  background: white;
+
+  border-radius: 22px;
+  overflow: hidden;
+
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   LEFT VISUAL PANEL
+========================================= */
+
+.register-visual {
+  position: relative;
+
+  padding: 45px;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(199, 25, 31, 0.25),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #a9141a, #5f0d12);
+
+  color: white;
+  overflow: hidden;
+}
+
+.register-visual::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -130px;
+  bottom: -120px;
+
+  border: 70px solid rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.register-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.brand-symbol {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  color: #c7191f;
+
+  border-radius: 12px;
+
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.register-brand strong {
+  display: block;
+
+  font-size: 17px;
+}
+
+.register-brand span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 10px;
+  letter-spacing: 0.4px;
+}
+
+/* =========================================
+   VISUAL CONTENT
+========================================= */
+
+.register-visual-content {
+  position: relative;
+  z-index: 2;
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  padding: 70px 0 40px;
+}
+
+.visual-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #ffb7ba;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.register-visual-content h1 {
+  margin: 0 0 20px;
+
+  font-size: 42px;
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.register-visual-content h1 span {
+  color: #ffb7ba;
+}
+
+.register-visual-content > p {
+  max-width: 450px;
+
+  margin: 0 0 35px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.register-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.register-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.benefit-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffb7ba;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.register-benefit strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 13px;
+}
+
+.register-benefit p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   VISUAL FOOTER
+========================================= */
+
+.register-visual-footer {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 10px;
+}
+
+/* =========================================
+   FORM AREA
+========================================= */
+
+.register-form-area {
+  padding: 45px 55px;
+
+  overflow-y: auto;
+}
+
+.register-form-card {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0 auto;
+}
+
+.register-form-header {
+  margin-bottom: 30px;
+}
+
+.mobile-brand {
+  display: none;
+}
+
+.register-form-header h2 {
+  margin: 0 0 8px;
+
+  color: #222;
+
+  font-size: 28px;
+}
+
+.register-form-header p {
+  max-width: 550px;
+
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   FORM SECTIONS
+========================================= */
+
+.register-section {
+  padding: 25px 0;
+
+  border-top: 1px solid #eeeeee;
+}
+
+.register-section-heading {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+}
+
+.register-section-heading > span {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f1;
+  color: #c7191f;
+
+  border-radius: 9px;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.register-section-heading h3 {
+  margin: 0 0 4px;
+
+  color: #292929;
+
+  font-size: 16px;
+}
+
+.register-section-heading p {
+  margin: 0;
+
+  color: #929292;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.register-form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 0 16px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.register-form-card .form-group {
+  margin-bottom: 17px;
+}
+
+.register-form-card .form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #343434;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.register-form-card .form-group label span {
+  color: #c7191f;
+}
+
+.register-form-card .form-group input,
+.register-form-card .form-group select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+
+  background: white;
+
+  color: #222;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.register-form-card .form-group input::placeholder {
+  color: #aaa;
+}
+
+.register-form-card .form-group input:hover,
+.register-form-card .form-group select:hover {
+  border-color: #c8c8c8;
+}
+
+.register-form-card .form-group input:focus,
+.register-form-card .form-group select:focus {
+  border-color: #c7191f;
+
+  box-shadow: 0 0 0 3px rgba(199, 25, 31, 0.07);
+}
+
+/* =========================================
+   SUBMIT
+========================================= */
+
+.register-submit {
+  padding-top: 20px;
+}
+
+.register-button {
+  width: 100%;
+
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #c7191f;
+  color: white;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 18px rgba(199, 25, 31, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.register-button:hover:not(:disabled) {
+  background: #a9141a;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 22px rgba(199, 25, 31, 0.23);
+}
+
+.register-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.register-button > span:last-child {
+  font-size: 18px;
+}
+
+.register-submit > p {
+  margin: 11px 0 0;
+
+  color: #999;
+
+  font-size: 10px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* =========================================
+   LOADING SPINNER
+========================================= */
+
+.register-spinner {
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation: register-spin 0.7s linear infinite;
+}
+
+@keyframes register-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.register-form-card .auth-footer {
+  margin-top: 25px;
+  padding-top: 20px;
+
+  border-top: 1px solid #eeeeee;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 12px;
+}
+
+.register-form-card .auth-footer a {
+  color: #c7191f;
+
+  text-decoration: none;
+
+  font-weight: 700;
+}
+
+.register-form-card .auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+  .register-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .register-visual {
+    min-height: 380px;
+  }
+
+  .register-visual-content {
+    margin: 50px 0 0;
+    padding: 0;
+  }
+
+  .register-visual-footer {
+    margin-top: 40px;
+  }
+
+  .register-form-area {
+    padding: 40px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .register-page {
+    padding: 0;
+  }
+
+  .register-wrapper {
+    min-height: 100vh;
+
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .register-visual {
+    min-height: auto;
+
+    padding: 25px 20px;
+  }
+
+  .register-visual-content {
+    margin-top: 45px;
+    margin-bottom: 20px;
+  }
+
+  .register-visual-content h1 {
+    font-size: 32px;
+  }
+
+  .register-visual-content > p {
+    font-size: 13px;
+  }
+
+  .register-benefits {
+    display: none;
+  }
+
+  .register-visual-footer {
+    display: none;
+  }
+
+  .register-form-area {
+    padding: 30px 20px 40px;
+  }
+
+  .mobile-brand {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #c7191f;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+  }
+
+  .register-form-header h2 {
+    font-size: 24px;
+  }
+
+  .register-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .register-section {
+    padding: 22px 0;
+  }
+}

@@ -1,0 +1,257 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 720px;
+  height: 100vh;
+  background-image: url("../assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* =========================
+   HERO CONTAINER
+========================= */
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 80px 90px;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  max-width: 950px;
+}
+
+.hero-content h1 {
+  margin: 0 0 35px;
+
+  color: #ffffff;
+
+  font-size: 72px;
+  line-height: 1.12;
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+}
+
+.hero-content p {
+  max-width: 950px;
+
+  margin: 0 0 35px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  line-height: 1.55;
+
+  font-weight: 400;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+}
+
+.hero-primary-button,
+.hero-secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 190px;
+  height: 55px;
+
+  padding: 0 30px;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+/* Primary button */
+
+.hero-primary-button {
+  background: #c7191f;
+
+  color: #ffffff;
+
+  border: 1px solid #c7191f;
+}
+
+.hero-primary-button:hover {
+  background: #a91419;
+
+  border-color: #a91419;
+}
+
+/* Secondary button */
+
+.hero-secondary-button {
+  background: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid #c7191f;
+}
+
+.hero-secondary-button:hover {
+  background: #c7191f;
+
+  color: #ffffff;
+}
+
+/* =========================
+   LARGE TABLETS
+========================= */
+
+@media (max-width: 1200px) {
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-container {
+    padding: 70px 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 62px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+
+    max-width: 800px;
+  }
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 600px;
+
+    background-position: center;
+  }
+
+  .hero-container {
+    padding: 70px 35px;
+  }
+
+  .hero-content {
+    max-width: 750px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 620px;
+
+    align-items: center;
+  }
+
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.62);
+  }
+
+  .hero-container {
+    padding: 60px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 15px;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+}
