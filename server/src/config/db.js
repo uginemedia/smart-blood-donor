@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
-    // await mongoose.connect(
-    //   `mongodb+srv://codingweb656_db_user:Z9aYEXXnkeDHjyQI@cluster0.vwmxnzu.mongodb.net/`,
-    // );
+    // await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(
+      `mongodb+srv://codingweb656_db_user:Z9aYEXXnkeDHjyQI@cluster0.vwmxnzu.mongodb.net/`,
+    );
 
     console.log("✅ MongoDB Connected");
   } catch (error) {
