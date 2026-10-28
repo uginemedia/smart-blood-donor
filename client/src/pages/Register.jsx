@@ -57,7 +57,9 @@ const Register = () => {
     try {
       setLoading(true);
 
-      const response = await api.post("/auth/register", formData);
+      const response = await api.post("/auth/register", formData, {
+        method: "POST",
+      });
 
       if (response.data.success) {
         toast.success("Donor registration successful!");
