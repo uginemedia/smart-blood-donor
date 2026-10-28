@@ -13,18 +13,28 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+// Allow your deployed Netlify frontend
+const allowedOrigins = [
+  "https://melodious-pony-9d8ec1.netlify.app",
+  "http://localhost:5173",
+];
+
 // Middlewares
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: function (origin, callback) {
+      // Allow requests without an Origin header, such as server-to-server calls
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
-
-app.use(helmet());
 
 app.use(express.json());
 
@@ -33,6 +43,8 @@ app.use(
     extended: true,
   }),
 );
+
+app.use(helmet());
 
 app.use(cookieParser());
 
